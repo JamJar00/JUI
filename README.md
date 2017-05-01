@@ -10,7 +10,7 @@ JUI is a simple to use user interface framework that provides 3 different menu t
 JUI allows for a number components to be added to the views including:
 * Buttons - Provide callbacks when selected.
 * Text - Simple label components.
-* Images - Hold images loaded form the SD card. (Not working as SD cards on the LaFortuna are too tempermental!)
+* Images - Hold images loaded from the SD card. (Not working as SD cards on the LaFortuna are too tempermental!)
 
 Each component can be additionally provided a style that affects the position, precense and colour of the individual borders and background.
 
