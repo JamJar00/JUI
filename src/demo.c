@@ -38,7 +38,6 @@ int main() {
   menu = iconmenu_create(COUNT, button_components, 20, 20);
 
   iconmenu_draw(&menu);
-  iconmenu_draw(&menu);
 
   iconmenu_select(&menu, 0);
 
