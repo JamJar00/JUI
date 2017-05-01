@@ -16,8 +16,6 @@ void image_create(component_t* image style_t style, char* name) {
 }
 
 void image_draw_callback(component_t* component, rectangle_t rect) {
-    style_draw(rect, component->style);
-
     init_pix_stream(rect);
     unsigned int read = 0;
     uint16_t buffer[F_CHUNK_READ_SIZE];

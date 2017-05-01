@@ -38,7 +38,14 @@ void iconmenu_draw(iconmenu_t* menu) {
       pos.y + menu->icon_height - 1
     };
 
+    uint16_t old_bg = display.background;
+    if (menu->components[i].style.flags & STYLE_BACKGROUND)
+        display.background = menu->components[i].style.background_color;
+
+    style_draw(rect, menu->components[i].style);
     menu->components[i].draw_func(menu->components + i, rect);
+
+    display.background = old_bg;
   }
 }
 

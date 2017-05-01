@@ -15,8 +15,6 @@ void text_create(component_t* component, style_t style, char* text) {
 }
 
 void text_draw_callback(component_t* component, rectangle_t rect) {
-    style_draw(rect, component->style);
-
     int width = strlen((char*)component->contents) * 6;
     int x_offset = (rect.right - rect.left - width) / 2;
     int y_offset = (rect.bottom - rect.top - 7) / 2;

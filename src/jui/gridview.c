@@ -29,7 +29,14 @@ void gridview_draw(gridview_t* view) {
             unitHeight * view->components[i].y + unitHeight * view->components[i].height
         };
 
+        uint16_t old_bg = display.background;
+        if (view->components[i].component->style.flags & STYLE_BACKGROUND)
+            display.background = view->components[i].component->style.background_color;
+
+        style_draw(rect, view->components[i].component->style);
         view->components[i].component->draw_func(view->components[i].component, rect);
+
+        display.background = old_bg;
     }
 }
 

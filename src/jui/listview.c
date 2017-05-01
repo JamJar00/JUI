@@ -20,7 +20,14 @@ void listview_draw(listview_t* view) {
   for (i = 0; i < view->count; i++) {
     rectangle_t comp_rect = {COMPONENT_X_OFFSET, display.width - COMPONENT_X_OFFSET * 2, top, top + COMPONENT_HEIGHT - 1};
 
+    uint16_t old_bg = display.background;
+    if (view->components[i].style.flags & STYLE_BACKGROUND)
+        display.background = view->components[i].style.background_color;
+
+    style_draw(comp_rect, view->components[i].style);
     view->components[i].draw_func(view->components + i, comp_rect);
+
+    display.background = old_bg;
 
     top += COMPONENT_HEIGHT + 1;
   }

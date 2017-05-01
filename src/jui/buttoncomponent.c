@@ -15,15 +15,14 @@ void button_create(component_t* button, style_t style, component_t* contents, vo
 }
 
 static void button_draw_callback(component_t* component, rectangle_t rect) {
-    style_draw(rect, component->style);
-
     rectangle_t r = (rectangle_t){rect.left + 2, rect.right - 2, rect.top + 2, rect.bottom - 2};
     component_t* child = (component_t*)component->contents;
 
     uint16_t old_bg = display.background;
-    if (component->style.flags & STYLE_BACKGROUND)
-        display.background = component->style.background_color;
+    if (child->style.flags & STYLE_BACKGROUND)
+        display.background = child->style.background_color;
 
+    style_draw(rect, child->style);
     child->draw_func(child, r);
 
     display.background = old_bg;
