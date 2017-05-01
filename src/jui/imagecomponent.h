@@ -3,6 +3,6 @@
 
 #include "jui.h"
 
-void image_create(component_t* button, style_t style, char* name);
+void image_create(component_t* image, style_t style, char* name);
 
 #endif
