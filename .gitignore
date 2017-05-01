@@ -31,3 +31,6 @@
 # Debug files
 *.dSYM/
 *.su
+
+# Dependency files
+*.d
