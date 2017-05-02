@@ -23,7 +23,7 @@
 /  f_getfree() and optional writing functions as well. */
 
 
-#define _FS_MINIMIZE	3
+#define _FS_MINIMIZE	2
 /* This option defines minimization level to remove some API functions.
 /
 /   0: All basic functions are enabled.
