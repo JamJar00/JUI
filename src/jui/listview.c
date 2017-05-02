@@ -9,7 +9,7 @@
 static void draw_select_line(listview_t* view, uint16_t color);
 
 listview_t listview_create(uint8_t count, component_t* components) {
-  return (listview_t){count, components, 0};
+  return (listview_t){count, components, count};
 }
 
 void listview_draw(listview_t* view) {

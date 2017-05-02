@@ -21,7 +21,7 @@ iconmenu_t iconmenu_create(uint8_t count, component_t* components, uint16_t icon
 
   uint16_t y_offset = (display.height - row_count * icon_height * 2) / 2 + icon_height / 2;;
 
-  return (iconmenu_t){count, components, icon_width, icon_height, icons_per_row, row_count, y_offset, 0};
+  return (iconmenu_t){count, components, icon_width, icon_height, icons_per_row, row_count, y_offset, count};
 }
 
 void iconmenu_draw(iconmenu_t* menu) {

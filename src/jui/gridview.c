@@ -11,7 +11,7 @@ static void draw_select_line(gridview_t* view, uint16_t color);
 static uint8_t find_component(gridview_t* view, uint8_t x, uint8_t y);
 
 gridview_t gridview_create(uint8_t xCount, uint8_t yCount, uint8_t count, gridview_component_t* components) {
-    return (gridview_t){xCount, yCount, count, components, 0};
+    return (gridview_t){xCount, yCount, count, components, count};
 }
 
 void gridview_draw(gridview_t* view) {
